@@ -73,5 +73,6 @@ end
 
 
 fastfetch
+#pfetch
 zoxide init fish | source
 starship init fish | source
