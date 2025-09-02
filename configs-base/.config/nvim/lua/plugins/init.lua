@@ -51,4 +51,20 @@ return {
     "wakatime/vim-wakatime",
     lazy = false,
   },
+
+  {
+      "mrcjkb/rustaceanvim",
+      version = "^3",
+      ft = { "rust" },
+      config = function(_,_)
+        vim.g.rustaceanvim = {
+          server = {
+            on_attach = function(client, buffer)
+              require("core.utils").load_mappings("lspconfig", { buffer = buffer })
+              require("nvchad.signature").setup(client)
+            end,
+          },
+        }
+      end
+  },
 }
