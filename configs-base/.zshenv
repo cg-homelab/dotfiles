@@ -218,3 +218,4 @@ if [ -t 1 ];then
     add-zsh-hook -Uz precmd slow_load_warning
     # add-zsh-hook zshexit cleanup
 fi
+. "$HOME/.cargo/env"
